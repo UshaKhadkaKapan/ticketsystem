@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Form, Button, Alert } from "react-bootstrap";
 
-const Login = () => {
+const Login = ({ frmSwitcher }) => {
   const [form, setForm] = useState({});
 
   const handleOnChange = (e) => {
@@ -51,7 +51,9 @@ const Login = () => {
       </Row>
       <Row>
         <Col>
-          <a href="">Forget Password ?</a>
+          <a href="" onClick={() => frmSwitcher("reset")}>
+            Forget Password ?
+          </a>
         </Col>
       </Row>
     </Container>
