@@ -9,7 +9,7 @@ const ResetPassword = ({ frmSwitcher }) => {
     setForm({ ...form, [name]: value });
   };
 
-  const handleOnSubmit = (e) => {
+  const handleOnResubmit = (e) => {
     e.preventDefault();
 
     console.log(form);
@@ -20,7 +20,7 @@ const ResetPassword = ({ frmSwitcher }) => {
     <Container className="reg-form">
       <Row>
         <Col>
-          <Form className="ml-5" onSubmit={handleOnSubmit}>
+          <Form className="ml-5" autoComplete="off" onSubmit={handleOnResubmit}>
             <h1 className=" text-center text-info ">ResetPassword</h1>
             <hr />
             <Form.Group className="mb-3" controlId="formGroupEmail">
@@ -42,8 +42,8 @@ const ResetPassword = ({ frmSwitcher }) => {
       </Row>
       <Row>
         <Col>
-          <a href="" onClick={() => frmSwitcher("login")}>
-            Login Now
+          <a href="" onClick={() => frmSwitcher("")}>
+            Password Reset
           </a>
         </Col>
       </Row>
