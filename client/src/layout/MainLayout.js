@@ -4,12 +4,17 @@ import Header from "./Header";
 
 const MainLayout = ({ children }) => {
   return (
-    <div>
-      <Header />
+    <div className="default-layout">
+      <header className="header">
+        <Header />
+      </header>
 
       {/* main part */}
+      <main className="main">{children}</main>
 
-      <Footer />
+      <footer className="footer">
+        <Footer />
+      </footer>
     </div>
   );
 };

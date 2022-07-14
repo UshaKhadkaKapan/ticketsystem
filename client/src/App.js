@@ -6,8 +6,10 @@ import EntryPage from "./pages/entry/EntryPage";
 const App = () => {
   return (
     <div>
-      <MainLayout />
-      <EntryPage />
+      <MainLayout>
+        Dashboard
+        {/* <EntryPage /> */}
+      </MainLayout>
     </div>
   );
 };
