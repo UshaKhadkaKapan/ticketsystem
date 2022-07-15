@@ -13,7 +13,7 @@ const TicketTable = ({ ticket }) => {
         </tr>
       </thead>
       <tbody>
-        {ticket.length &&
+        {ticket.length ? (
           ticket.map((row) => (
             <tr key={row.id}>
               <td>{row.id}</td>
@@ -21,7 +21,14 @@ const TicketTable = ({ ticket }) => {
               <td>{row.status}</td>
               <td>{row.createdDate}</td>
             </tr>
-          ))}
+          ))
+        ) : (
+          <tr>
+            <td colSpan="4" className="text-center">
+              No Tickets
+            </td>
+          </tr>
+        )}
       </tbody>
     </Table>
   );
