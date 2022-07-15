@@ -9,7 +9,7 @@ const TicketTable = () => {
           <th>#</th>
           <th>Subjects</th>
           <th>Status</th>
-          <th>Opened Date</th>
+          <th>Created Date</th>
         </tr>
       </thead>
       <tbody>
