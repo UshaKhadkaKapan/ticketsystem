@@ -3,12 +3,14 @@ import "./App.css";
 import MainLayout from "./layout/MainLayout";
 import Dashboard from "./pages/dashboard/Dashboard";
 import EntryPage from "./pages/entry/EntryPage";
+import AddNewTicket from "./pages/new-ticket/AddNewTicket";
 
 const App = () => {
   return (
     <div>
       <MainLayout>
-        <Dashboard />
+        <AddNewTicket />
+        {/* <Dashboard /> */}
         {/* <EntryPage /> */}
       </MainLayout>
     </div>
