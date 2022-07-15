@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import TicketTable from "../../components/ticket-table/TicketTable";
+import ticket from "../../assets/data/dummydata.json";
 
 const Dashboard = () => {
   return (
@@ -9,7 +10,7 @@ const Dashboard = () => {
         <Col className="text-center mt-4 md-2">
           <Button
             variant="info"
-            style={{ "font-size": "2rem", padding: "10px 30px" }}
+            style={{ fontSize: "2rem", padding: "10px 30px" }}
           >
             Add new Button
           </Button>
@@ -27,7 +28,7 @@ const Dashboard = () => {
       <hr />
       <Row>
         <Col className="Recent Ticket">
-          <TicketTable />
+          <TicketTable ticket={ticket} />
         </Col>
       </Row>
     </Container>
