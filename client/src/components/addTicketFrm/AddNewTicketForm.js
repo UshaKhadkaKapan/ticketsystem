@@ -1,23 +1,11 @@
 import React, { useState } from "react";
-import { Form, Button } from "react-bootstrap";
+import { Form, Button, Row, Col } from "react-bootstrap";
 
-const AddNewTicketForm = () => {
-  const [form, setForm] = useState({});
-
-  const handleOnChange = (e) => {
-    const { name, value } = e.target;
-    setForm({ ...form, [name]: value });
-  };
-  const handleOnSubmit = (e) => {
-    e.preventDefault();
-
-    console.log(form);
-    // need to meet the api end point
-  };
+const AddNewTicketForm = ({ handleOnChange, handleOnSubmit }) => {
   return (
-    <div className="reg-form mb-3">
+    <div className="reg-form mb-3 mt-3">
       <Form className="ml-5" onSubmit={handleOnSubmit}>
-        <h1 className=" text-center text-info ">Client Login </h1>
+        <h1 className=" text-center text-info "> Add New Ticket </h1>
         <hr />
         <Form.Group sm={9} className="mb-3" controlId="formGroupEmail">
           <Form.Label column sm={3}>
